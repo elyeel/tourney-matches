@@ -1,25 +1,18 @@
-import logo from './logo.svg';
+// import Match from './components/match/Match'
+import MatchList from './components/matchList/MatchList';
+// import Player from './components/player/Player'
+import PlayerList from './components/playerList/PlayerList';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+	return (
+		<div className="App">
+			<h1>
+				Tourney Matches{' '}
+				<span>Where Coding and Tournaments found their Match!</span>
+			</h1>
+			<PlayerList />
+			<MatchList />
+		</div>
+	);
 }
-
-export default App;
