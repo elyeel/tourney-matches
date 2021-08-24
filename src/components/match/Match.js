@@ -1,13 +1,25 @@
-export default function Match() {
+export default function Match(props) {
+	let { players, winner, scoreDifference } = props;
 	return (
 		<article className="Match">
 			<h1>
-				Joe <span>vs</span> Bob
+				{players[0]} <span>vs</span> {players[1]}
 			</h1>
 			{/* To be shown when there is a winner */}
-			<h2>Joe is the winner by 1!</h2>
+			{/* {winner && (
+				<h2>
+					{winner} is the winner by {scoreDifference}!
+				</h2>
+			)}
 			{/* To be shown when there is no winner */}
-			<h2>No winners yet!</h2>
+			{/* {!winner && <h2>No winners yet!</h2>} */}
+			{winner ? (
+				<h2>
+					{winner} is the winner by {scoreDifference}!
+				</h2>
+			) : (
+				<h2>No winners yet!</h2>
+			)}
 		</article>
 	);
 }
