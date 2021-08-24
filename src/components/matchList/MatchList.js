@@ -1,9 +1,9 @@
 import Match from '../match/Match';
-import matchData from '../data/matchData';
+// import matchData from '../data/matchData';
 
-export default function MatchList(props) {
+export default function MatchList({ matchData }) {
 	const oneMatch = matchData[0];
-	console.log(oneMatch);
+	// console.log(oneMatch);
 
 	return (
 		<section className="PlayerList MatchList">

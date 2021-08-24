@@ -1,6 +1,6 @@
-// import Match from './components/match/Match'
+import playerData from './components/data/playerData';
+import matchData from './components/data/matchData';
 import MatchList from './components/matchList/MatchList';
-// import Player from './components/player/Player'
 import PlayerList from './components/playerList/PlayerList';
 import './App.css';
 
@@ -11,8 +11,8 @@ export default function App() {
 				Tourney Matches{' '}
 				<span>Where Coding and Tournaments found their Match!</span>
 			</h1>
-			<PlayerList />
-			<MatchList />
+			<PlayerList matchData={matchData} playerData={playerData} />
+			<MatchList matchData={matchData} />
 		</div>
 	);
 }
